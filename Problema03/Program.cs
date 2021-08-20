@@ -7,6 +7,7 @@ namespace Problema03
     {
         static void Main(string[] args)
         {
+
             Auto Auto1 = CrearAutoFiat(2020);            
             MostrarAuto(Auto1);            
 
@@ -48,8 +49,16 @@ namespace Problema03
 
         static void MostrarAuto(Auto auto)
         {
-            Console.WriteLine("{0} - {1}", auto.Modelo, auto.Anio);
-            Console.ReadLine();
+            try
+            {
+                Console.WriteLine("{0} - {1}", auto.Modelo, auto.Anio);
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"se intento mostrar un auto que no existe");
+            }
+            
         }
     }
 }

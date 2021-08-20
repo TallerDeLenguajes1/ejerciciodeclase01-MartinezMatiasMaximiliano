@@ -11,9 +11,18 @@ namespace Problema02
 
             num1 = 30;
             num2 = 60;
+
+            try
+            {
             result = Convert.ToByte(num1 * num2);
             Console.WriteLine("{0} x {1} = {2}", num1, num2, result);
             Console.ReadLine();
+
+            }catch(Exception ex)
+            {
+                Console.WriteLine($"El resultado de {num1} * {num2} esta fuera del rango del tipo de dato byte ");
+            }
+            
         }
     }
 }

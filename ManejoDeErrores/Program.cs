@@ -6,6 +6,7 @@ namespace ManejoDeErrores
     {
         static void Main(string[] args)
         {
+            
             string[] list = new string[5];
             list[0] = "Sunday";
             list[1] = "Monday";
@@ -13,12 +14,16 @@ namespace ManejoDeErrores
             list[3] = "Wednesday";
             list[4] = "Thursday";
 
-            
-            for (int i = 0; i <= 5; i++)
+            try
             {
+                for (int i = 0; i <= 5; i++)
+            
                 Console.WriteLine(list[i].ToString());
-            }
-            Console.ReadLine();
+            }catch(Exception ex)
+            {
+                 Console.WriteLine("valor fuera de rango");
+            }       
+                Console.ReadLine();
         }
     }
 }
